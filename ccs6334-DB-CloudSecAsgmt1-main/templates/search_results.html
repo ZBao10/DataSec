@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}Search Results{% endblock %}
+
+{% block content %}
+    <h1>Results for “{{ search.destination }}”</h1>
+    <p class="subtitle">
+        Check-in: {{ search.check_in }}<br>
+        Guests: {{ search.guests or "Not specified" }}
+    </p>
+
+    <div class="results-list">
+        <div class="result-item">
+            <h3>🏨 Sample Hotel</h3>
+            <p>⭐️⭐️⭐️⭐️ · City center · $120/night</p>
+        </div>
+        <div class="result-item">
+            <h3>🏨 Another Hotel</h3>
+            <p>⭐️⭐️⭐️ · Near beach · $95/night</p>
+        </div>
+    </div>
+{% endblock %}

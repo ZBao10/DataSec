@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}Home - Hotel Booking System{% endblock %}
+
+{% block content %}
+    <h1>Find your next stay</h1>
+    <p>Search deals on hotels, homes, and much more...</p>
+
+    <form method="GET" action="{{ url_for('search') }}" class="search-container">
+        <input type="text" name="destination" placeholder="Where are you going?" required />
+        <input type="date" name="check_in" required />
+        <input type="text" name="guests" placeholder="2 adults · 0 children · 1 room" />
+        <button type="submit">Search</button>
+    </form>
+
+    <div class="features">
+        <div class="feature-item">✓ FREE cancellation on most rooms</div>
+        <div class="feature-item">✓ 300M+ reviews from fellow travelers</div>
+        <div class="feature-item">✓ 2+ million properties worldwide</div>
+        <div class="feature-item">✓ 24/7 customer service</div>
+    </div>
+{% endblock %}
